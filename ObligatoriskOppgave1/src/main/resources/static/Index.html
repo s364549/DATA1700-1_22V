@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig1</title>
+    <script type="application/javascript" src="Oblig1.js"></script>
+    <style>
+        .feilmelding {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Bestilling av kinobilletter</h1>
+<table>
+    <tr>
+        <tb>Velg film: </tb>
+        <tb><select id="velgFilm">
+            <option value="" disabled selected>Velg film her</option>
+            <option>Spider-man</option>
+            <option>Interstellar</option>
+            <option>Titanic</option>
+        </select></tb>
+    </tr>
+
+        <tr><th><br></th></tr>
+
+    <tr>
+        <td><label id="lbl0">Antall</label></td>
+        <td><input id="antall" class="input"/></td>
+        <td><div class="feilmelding" id="feil0"></div></td>
+    </tr>
+    <tr>
+        <td><label id="lbl1">Fornavn</label></td>
+        <td><input id="fornavn" class="input"/></td>
+        <td><div class="feilmelding" id="feil1"></div></td>
+    </tr>
+    <tr>
+        <td><label id="lbl2">Etternavn</label></td>
+        <td><input id="etternavn" class="input"/></td>
+        <td><div class="feilmelding" id="feil2"></div></td>
+    </tr>
+    <tr>
+        <td><label id="lbl3">Telefonnr</label></td>
+        <td><input id="telefonnr" class="input"/></td>
+        <td><div class="feilmelding" id="feil3"></div></td>
+    </tr>
+    <tr>
+        <td><label id="lbl4">Epost</label></td>
+        <td><input id="epost" class="input"/></td>
+        <td><div class="feilmelding" id="feil4"></div></td>
+    </tr>
+</table>
+<br>
+<button onclick="kjopBillett()">Kjøp billetter</button>
+
+<h2>Alle billetter</h2>
+<table id="registrer">
+    <tr>
+        <th> Film </th>
+        <th> Antall </th>
+        <th> Fornavn </th>
+        <th> Etternavn </th>
+        <th> Telefonnr </th>
+        <th> Epost </th>
+    </tr>
+</table>
+<br>
+<button onclick="slettInnhold()">Slett alle billetter</button>
+</body>
+</html>
