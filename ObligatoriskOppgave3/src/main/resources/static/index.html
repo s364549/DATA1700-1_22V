@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Oblig2</title>
+    <script type="application/javascript" src="script.js"></script>
+    <style>
+        .feilmelding {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Bestilling av kinobilletter</h1>
+            <form class="form">
+                <div class="form-group">
+                    <label>Velg film</label>
+                    <div id="velgFilm"></div>
+                </div>
+                <div class="form-group">
+                    <label for="antall" id="lbl0">Antall</label>
+                    <input id="antall" class="form-control" type="number"/>
+                    <div class="feilmelding" id="feil0"></div>
+                </div>
+                <div class="form-group">
+                    <label for="fornavn" id="lbl1">Fornavn</label>
+                    <input id="fornavn" class="form-control" type="text"/>
+                    <div class="feilmelding" id="feil1"></div>
+                </div>
+                <div class="form-group">
+                    <label for="fornavn" id="lbl2">Etternavn</label>
+                    <input id="etternavn" class="form-control" type="text"/>
+                    <div class="feilmelding" id="feil2"></div>
+                </div>
+                <div class="form-group">
+                    <label for="telefonnr" id="lbl3">Telefonnr</label>
+                    <input id="telefonnr" class="form-control" type="number"/>
+                    <div class="feilmelding" id="feil3"></div>
+                </div>
+                <div class="form-group">
+                    <label for="epost" id="lbl4">Epost</label>
+                    <input id="epost" class="form-control" type="text"/>
+                    <div class="feilmelding" id="feil4"></div>
+                </div>
+            </form>
+            <button class="btn btn-primary" onclick="registrer()">Kjøp billetter</button>
+        </div>
+        <div class="col-md-8">
+            <h2>Alle billetter</h2>
+            <div id="resultat"></div>
+            <a class="btn btn-danger" onclick="slettAlle()">Slett alle billetter</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
