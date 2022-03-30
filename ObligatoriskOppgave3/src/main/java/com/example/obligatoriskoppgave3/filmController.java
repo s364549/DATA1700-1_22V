@@ -30,7 +30,7 @@ public class filmController {
 
     @GetMapping("/hentAlle")
     public List<film> hentAlle() {
-        return rep.hentAlleFilmer();
+        return rep.sorter();
     }
 
     @GetMapping("/slettAlle")
