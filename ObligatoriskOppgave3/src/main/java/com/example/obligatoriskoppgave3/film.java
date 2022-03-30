@@ -1,6 +1,8 @@
 package com.example.obligatoriskoppgave3;
 
-public class film {
+//public class film implements Comparable<film>
+//Interfacet Comparable definerer metoden compareTo(), som film-klassen *må* inneholde; se nederst.
+public class film{
         private int id;
         private String tittel;
         private String antall;
@@ -77,5 +79,21 @@ public class film {
         public void setEpost(String epost) {
             this.epost = epost;
         }
-    }
+
+/*compareTo() returnerer:
+positivt heltall hvis dette film-objektet skal sorteres etter/under film f.
+negativt heltall hvis dette film-objektet skal sorteres først/over film f.
+0 hvis dette film-objektet og film f er likestilte.
+
+Vi må få funksjonen til å returnere ønsket verdi, basert på en slags beregning på this.etternavn & f.getEtternavn().
+Deretter i filmRepository, instansiér List<film> listen, og kall Collections.sort(listen), som bytter plass på
+objektene i listen, basert på denne compareTo().
+
+  @Override
+  public int compareTo(film f) {
+    return 0;
+  }
+
+ */
+}
 
