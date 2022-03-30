@@ -9,6 +9,7 @@ import java.util.*;
 
 @Repository
 public class filmRepository {
+    List<film> filmer = new ArrayList<>();
 
     @Autowired
     private JdbcTemplate db;
@@ -31,7 +32,6 @@ public class filmRepository {
     }
     
     public List<film> sorter() {
-        List<film> filmer = new ArrayList<>();
         filmer = hentAlleFilmer();
         Collections.sort(filmer);
         return filmer;
