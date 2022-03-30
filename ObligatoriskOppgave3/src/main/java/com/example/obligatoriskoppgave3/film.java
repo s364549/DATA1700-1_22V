@@ -76,21 +76,5 @@ public class film implements Comparable<film>{
     }
 }
 
-/*compareTo() returnerer:
-positivt heltall hvis dette film-objektet skal sorteres etter/under film f.
-negativt heltall hvis dette film-objektet skal sorteres først/over film f.
-0 hvis dette film-objektet og film f er likestilte.
-
-Vi må få funksjonen til å returnere ønsket verdi, basert på en slags beregning på this.etternavn & f.getEtternavn().
-Deretter i filmRepository, instansiér List<film> listen, og kall Collections.sort(listen), som bytter plass på
-objektene i listen, basert på denne compareTo().
-
-  @Override
-  public int compareTo(film f) {
-    return 0;
-  }
-
- */
-
 
 
