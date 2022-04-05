@@ -5,8 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @RestController
 public class filmController {
@@ -30,7 +29,7 @@ public class filmController {
 
     @GetMapping("/hentAlle")
     public List<film> hentAlle() {
-        return rep.hentAlleFilmer();
+        return rep.sorter();
     }
 
     @GetMapping("/slettAlle")

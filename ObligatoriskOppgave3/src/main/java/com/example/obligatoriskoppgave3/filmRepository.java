@@ -5,10 +5,11 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import java.util.*;
 
 @Repository
 public class filmRepository {
+    List<film> filmer = new ArrayList<>();
 
     @Autowired
     private JdbcTemplate db;
@@ -28,5 +29,11 @@ public class filmRepository {
     public void slettAlle() {
         String sql = "DELETE FROM film";
         db.update(sql);
+    }
+    
+    public List<film> sorter() {
+        filmer = hentAlleFilmer();
+        Collections.sort(filmer);
+        return filmer;
     }
 }
